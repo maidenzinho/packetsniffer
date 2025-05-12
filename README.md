@@ -1,9 +1,8 @@
 # PacketSniffer - Documentação Completa
 
 ## Visão Geral
-```
 PacketSniffer é uma ferramenta de captura e análise de pacotes de rede em tempo real, desenvolvida em C++ utilizando a biblioteca libpcap para captura e o framework Qt para interface gráfica. Suporta protocolos TCP/IP, UDP e HTTP, exibindo informações detalhadas dos pacotes capturados e permitindo análise básica de anomalias no tráfego.
-```
+
 ---
 
 ## Estrutura do Projeto
@@ -32,17 +31,13 @@ PacketSnifferProject/
 ## Arquivos Principais
 
 ### 1. `PacketSniffer.h`
-```
 Define a classe `PacketSniffer`, que herda de `QThread` para executar a captura em thread separada. Contém métodos para iniciar e parar a captura, além de sinal para enviar pacotes capturados para a interface.
-```
+
 ### 2. `PacketSniffer.cpp`
-```
 Implementa a captura usando libpcap, análise básica dos pacotes Ethernet/IP/TCP/UDP, extração de IPs, portas, protocolo e payload. Emite sinal com dados do pacote para a interface.
-```
+
 ### 3. `MainWindow.h`
-```
 Declara a classe `MainWindow`, que monta a interface gráfica principal com uma tabela para exibir os pacotes capturados.
-```
 ### 4. `MainWindow.cpp`
 
 Implementa a interface gráfica usando Qt Widgets. Inicializa o `PacketSniffer`, conecta o sinal de pacotes capturados para atualizar a tabela em tempo real. Seleciona automaticamente o primeiro dispositivo de rede disponível para captura.
